@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """
-python script that lists all states from the database hbtn_0e_0_usa with
-a given name
+take in an argument and displays all values in the states table of hbtn_0e_0_usa
 """
 
 import MySQLdb
@@ -13,9 +12,9 @@ if __name__ == "__main__":
     cursor = db.cursor()
     cursor.execute("SELECT * FROM states WHERE name LIKE '{:s}' ORDER BY \
     id ASC".format(argv[4]))
-    rows = cursor.fetchall()
-    for row in rows:
-        if row[1] == argv[4]:
-            print(row)
+    s = cursor.fetchall()
+    for a in s:
+        if a[1] == argv[4]:
+            print(a)
     cursor.close()
     db.close()
