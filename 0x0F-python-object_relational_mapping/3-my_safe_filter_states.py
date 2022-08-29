@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """
-python script that lists all states from the database hbtn_0e_0_usa with a
-given name and is safe from MySQL injections
+takes in arguments and displays all values in the states
 """
 
 import MySQLdb
@@ -13,8 +12,8 @@ if __name__ == "__main__":
     cursor = db.cursor()
     cursor.execute("SELECT * FROM states WHERE name LIKE %s ORDER BY id ASC",
                    (argv[4],))
-    rows = cursor.fetchall()
-    for row in rows:
-        print(row)
+    s = cursor.fetchall()
+    for a in s:
+        print(a)
     cursor.close()
     db.close()
