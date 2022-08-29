@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-python script that lists all cities from the database hbtn_0e_4_usa
+lists all cities from the database hbtn_0e_4_usa
 """
 
 import MySQLdb
@@ -12,8 +12,8 @@ if __name__ == "__main__":
     cursor = db.cursor()
     cursor.execute("SELECT cities.id, cities.name, states.name FROM cities \
     JOIN states ON cities.state_id = states.id ORDER BY cities.id")
-    rows = cursor.fetchall()
-    for row in rows:
-        print(row)
+    s = cursor.fetchall()
+    for a in s:
+        print(a)
     cursor.close()
     db.close()
