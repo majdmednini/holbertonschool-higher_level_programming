@@ -1,12 +1,12 @@
 #!/usr/bin/python3
 """
-list the first State object from a database
+print the first state object from the database hbtn_0e_6_usa
 """
 
 import sqlalchemy
-from sqlalchemy import create_engine
-from sqlalchemy.orm import sessionmaker
 from sys import argv
+from sqlalchemy.orm import sessionmaker
+from sqlalchemy import create_engine
 from model_state import Base, State
 
 if __name__ == "__main__":
@@ -16,9 +16,9 @@ if __name__ == "__main__":
     Base.metadata.create_all(eng)
     Session = sessionmaker(bind=eng)
     session = Session()
-    first_state = session.query(State).order_by(State.id).first()
-    if first_state is not None:
-        print("{}: {}".format(first_state.id, first_state.name))
+    state1 = session.query(State).order_by(State.id).first()
+    if state1 is not None:
+        print("{}: {}".format(state1.id, state1.name))
     else:
         print("Nothing")
     session.close()
