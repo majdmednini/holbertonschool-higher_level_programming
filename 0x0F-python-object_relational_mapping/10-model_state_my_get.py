@@ -1,13 +1,13 @@
 #!/usr/bin/python3
 """
-prints the State object with the name passed as argument from a database
+print the state object with the name passed as argument from a db
 """
 
 import sqlalchemy
-from sqlalchemy import create_engine
-from sqlalchemy.orm import sessionmaker
 from sys import argv
 from model_state import Base, State
+from sqlalchemy.orm import sessionmaker
+from sqlalchemy import create_engine
 
 if __name__ == "__main__":
     eng = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.format(argv[1],
