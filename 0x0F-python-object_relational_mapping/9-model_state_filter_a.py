@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-list all State objects that contain the letter a from a database
+list all State obj that contain the letter a from db hbtn_0e_6_usa
 """
 
 import sqlalchemy
