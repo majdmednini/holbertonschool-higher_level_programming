@@ -1,14 +1,11 @@
 #!/usr/bin/python3
-"""
-add the state object louisiana to a db
-"""
+""" add the state object louisiana to a db """
 
 import sqlalchemy
 from sys import argv
 from model_state import Base, State
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy import create_engine
-
 
 if __name__ == "__main__":
     engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.format(argv[1],
