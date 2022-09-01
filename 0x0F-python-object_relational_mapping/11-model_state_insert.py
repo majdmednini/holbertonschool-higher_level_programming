@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-add the state object "Louisiana" to a db
+add the state object louisiana to a db
 """
 
 import sqlalchemy
