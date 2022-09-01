@@ -1,13 +1,13 @@
 #!/usr/bin/python3
 """
-changes the name of the State object where id=2 to New Mexico from a database
+change the name of a state object from the db
 """
 
 import sqlalchemy
-from sqlalchemy import create_engine
-from sqlalchemy.orm import sessionmaker
 from sys import argv
 from model_state import Base, State
+from sqlalchemy.orm import sessionmaker
+from sqlalchemy import create_engine
 
 
 if __name__ == "__main__":
