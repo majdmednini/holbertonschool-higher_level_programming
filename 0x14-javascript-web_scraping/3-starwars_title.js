@@ -7,4 +7,3 @@ request(starWarsUri, function (_err, _res, body) {
 	  body = JSON.parse(body);
 	  console.log(body.title);
 });
-
